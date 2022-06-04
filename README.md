@@ -52,3 +52,25 @@ Resources to consider
 | O(nlog(n)) | Linear Logarithmic | Merge sort |
 | O(n^2) | Quadratic | Shortest path between two nodes in a graph | 
 | O(2^n) | Exponential | The Towers of Hanoi problem |
+
+
+### Recursion
+
+**Definition**: Solves a problem by calling a itself to work on a smaller subset of the problem 
+
+- Terminates when *base case* is reached
+- Calls itself in a *cursive case* to perform operation on subset of the problem
+- Each recursive call requires stack space and will cause stack overflow, if infinite rescurion occurs
+- Useful in cases where iterative solutions are not clear even though iterative solutions are more efficient in most cases
+
+Examples:
+
+- Fibonacci Series
+- Factoral
+- Merge Sort
+- Quick Sort
+- Binary Search
+- Tree Traversal (InOrder, PreOrder, PostOrder)
+- Graph Traversal (DFS - Depth First Search and BFS - Breadth First Search)
+- Towers of Hanoi
+

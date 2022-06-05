@@ -74,3 +74,17 @@ Examples:
 - Graph Traversal (DFS - Depth First Search and BFS - Breadth First Search)
 - Towers of Hanoi
 
+#### Backtracking
+
+**Definition**: Use of recursion to explore all possibilities until goal state is reached
+
+- Subset of recursion 
+- Used in problems that require trying all possibilities 
+
+Examples:
+
+- Generating All Possible Binary Strings (for given length)
+- Generating k-ary Strings
+- The Knapsack Problem
+- Hamiltonian Cycles
+

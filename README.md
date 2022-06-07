@@ -88,3 +88,19 @@ Examples:
 - The Knapsack Problem
 - Hamiltonian Cycles
 
+### Linked List
+
+**Definition**: data structure used for storing collections of data 
+
+- Successive elements are connected by pointers
+- Last element points to NULL
+- Can grow until memory is exhausted (memory limited by system)
+- Extra memory used to store pointer information
+
+Operations:
+
+- Insert
+- Delete
+- Delete List
+- Count
+- Find nth node from end of list

@@ -4,7 +4,6 @@ import os.path
 sys.path.append(os.path.dirname(os.path.abspath(__file__)) + "/..")
 
 from exception.exceptions import EmptyError
-from node import Node
 
 class LinkedList:
     def __init__(self):

@@ -3,6 +3,7 @@ import sys
 import os.path
 sys.path.append(os.path.dirname(os.path.abspath(__file__)) + "/..")
 
+from linkedlist.linked_list import *
 from exception.exceptions import EmptyError
 
 class ArrayStack:
@@ -29,6 +30,28 @@ class ArrayStack:
         if len(self) > 0:
             result = self._stack[-1]
         return result
+
+    def size(self):
+        return len(self)
+
+class LinkedListStack():
+    def __init__(self):
+        self._stack = LinkedList()
+
+    def __len__(self):
+        return len(self._stack)
+
+    def __str__(self):
+        return str(self._stack)
+
+    def push(self, item):
+        self._stack.insertAtHead(item)
+
+    def pop(self):
+        return self._stack.removeHead()
+
+    def peek(self):
+        return self._stack._head
 
     def size(self):
         return len(self)

@@ -1,4 +1,9 @@
-from exceptions import EmptyError
+#importing items in sibling path
+import sys
+import os.path
+sys.path.append(os.path.dirname(os.path.abspath(__file__)) + "/..")
+
+from exception.exceptions import EmptyError
 from stack import ArrayStack
 import unittest
 

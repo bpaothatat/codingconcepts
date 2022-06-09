@@ -1,2 +1,0 @@
-class EmptyError(Exception):
-    pass

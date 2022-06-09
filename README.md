@@ -106,6 +106,27 @@ Operations:
 - Find nth node from end of list
 
 
+### Stack
+
+Operations:
+
+- Push - insert element onto stack
+- Pop - removes and returns the most recently inserted element from the stack
+- Top - returns the most recently inserted element
+- Size - returns the number of elements on the stack
+- IsEmptyStack - returns boolean indicating if stack is empty
+- IsFullStack - returns boolean indicating if stack is full
+
+Applications:
+
+- Balancing of symbols
+- Infix-to-postfix conversion
+- Evaluation of postfix expression
+- Implementing function calls 
+- Finding of spans
+- Page-visted history in Web browser
+- Undo sequeence in text editor
+
 ## TODO
 - Linked List
     - Implement insert by position

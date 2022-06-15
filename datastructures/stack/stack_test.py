@@ -17,6 +17,13 @@ class StackTest(unittest.TestCase):
         self.assertEqual(stack.peek(), None)
         self.assertEqual(len(stack), 0)
 
+    def test_add_stack(self):
+        stack = ArrayStack()
+        stack.push(1)
+        stack.push(2)
+        self.assertEqual(len(stack), 2)
+        self.assertEqual(stack.peek(), 2)
+
 class StackTest(unittest.TestCase):
 
     def test_empty_stack(self):
@@ -26,6 +33,13 @@ class StackTest(unittest.TestCase):
         self.assertTrue(context.exception, 'Stack is empty')
         self.assertEqual(stack.peek(), None)
         self.assertEqual(len(stack), 0)
+
+    def test_add_stack(self):
+        stack = LinkedListStack()
+        stack.push(1)
+        stack.push(2)
+        self.assertEqual(len(stack), 2)
+        self.assertEqual(stack.peek(), 2)
 
 
 if __name__ == '__main__':

@@ -51,7 +51,7 @@ class LinkedListStack():
         return self._stack.removeHead()
 
     def peek(self):
-        return self._stack._head
+        return self._stack.peek()
 
     def size(self):
         return len(self)

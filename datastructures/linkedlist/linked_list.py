@@ -5,6 +5,14 @@ sys.path.append(os.path.dirname(os.path.abspath(__file__)) + "/..")
 
 from exception.exceptions import EmptyError
 
+class Node:
+    def __init__(self, data, next=None):
+        self._data = data
+        self._next = next
+
+    def __str__(self):
+        return str(self._data)
+
 class LinkedList:
     def __init__(self):
         self._head = None
@@ -70,3 +78,9 @@ class LinkedList:
                 result = current._data  
             self._count -= 1
             return result
+
+    def peek(self):
+        result = None
+        if self._head:
+            result = self._head._data
+        return result

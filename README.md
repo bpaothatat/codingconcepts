@@ -127,6 +127,20 @@ Applications:
 - Page-visted history in Web browser
 - Undo sequeence in text editor
 
+### Stack
+
+Operations:
+
+- Enqueue - Inserts element at the end of the queue
+- Dequeue - Removes and returns the element at the front of the list
+
+Applications:
+
+- Operating system schedule jobs with equal priority
+- Simulate real-world queues
+- Asynchronous data transfers
+- Waiting times of customer call center
+
 ## TODO
 - Linked List
     - Implement insert by position

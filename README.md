@@ -142,6 +142,5 @@ Applications:
 - Waiting times of customer call center
 
 ## TODO
-- Linked List
-    - Implement insert by position
-    - Implement circular linked list
+- Priority Queue
+- Clean up current notes

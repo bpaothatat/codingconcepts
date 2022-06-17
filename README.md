@@ -127,7 +127,7 @@ Applications:
 - Page-visted history in Web browser
 - Undo sequeence in text editor
 
-### Stack
+### Queue
 
 Operations:
 
@@ -136,10 +136,32 @@ Operations:
 
 Applications:
 
-- Operating system schedule jobs with equal priority
 - Simulate real-world queues
 - Asynchronous data transfers
 - Waiting times of customer call center
+
+### Priority Queue
+
+**Definition**: operates similar to a queue, but elements are removed based on priority
+
+Operations:
+
+- Enqueue - Inserts element into the queue
+- Dequeue - Removes and returns element with the highest priorty from the queue
+- Peek - Returns element with the highest priority from the queue
+
+Applications:
+
+- Operating system schedule jobs with equal priority
+- Graph algorithms (Dijkstra's shortest path, Prim's miniumum spanning tree, etc)
+- Data compresssion in Huffman code
+
+Implementations:
+
+- Array
+- Linked List
+- Heap 
+- Binary Search Tree
 
 ## TODO
 - Priority Queue

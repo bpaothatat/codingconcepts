@@ -108,6 +108,9 @@ Operations:
 
 ### Stack
 
+**Definition**: one-ended linear data structure that models a real world stack
+- LIFO - Last In First Out
+
 Operations:
 
 - Push - insert element onto stack
@@ -128,6 +131,9 @@ Applications:
 - Undo sequeence in text editor
 
 ### Queue
+
+**Definition**: linear data structure which models real world queues (check-out line)
+- FIFO - First In First Out
 
 Operations:
 
@@ -162,7 +168,3 @@ Implementations:
 - Linked List
 - Heap 
 - Binary Search Tree
-
-## TODO
-- Priority Queue
-- Clean up current notes

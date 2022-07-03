@@ -168,3 +168,24 @@ Implementations:
 - Linked List
 - Heap 
 - Binary Search Tree
+
+
+### Graph
+
+**Definition**: non-linear collection of nodes that contain data and are connected to other nodes
+
+Operations:
+- Add vertex - adds a vertex to the graph
+- Add edge - adds an edge between two vertices of the graph
+- Display vertex - displays a vertex of the graph
+
+Applications:
+- Representing relationships between components in electronic circuits
+- Transportation networks (Highway/Flights)
+- Computer networks
+- Databases (Entity Relationship)
+
+Implementations:
+- Adjacency matrix
+- Adjacency list
+- Adjancency set

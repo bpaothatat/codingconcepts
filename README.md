@@ -169,6 +169,34 @@ Implementations:
 - Heap 
 - Binary Search Tree
 
+### Tree
+
+**Definition**: non-linear data structure with each node pointing to a number of nodes
+
+- Root - node with no parents and each tree can only contain one
+- Edge - the link between parent and children nods
+- Leaf node - node with no children
+- Siblings - nodes that have the same parent
+- Depth - Number of nodes required to reach node from root node
+
+#### Binary Tree
+ 
+Operations:
+
+- Inserting an element
+- Deleting an element 
+- Searching for an element 
+- Traversing the tree
+- Size of tree
+- Height of tree
+- Least common ancestor (LCA)
+
+Applications:
+
+- Expression trees (compilers)
+- Huffman coding trees (data compression)
+- Binary search tree
+- Priority Queue
 
 ### Graph
 

@@ -180,6 +180,12 @@ Implementations:
 - Depth - Number of nodes required to reach node from root node
 
 #### Binary Tree
+
+**Definitions**
+
+- Strict Binary Tree - each node has exactly two children or no children
+- Full Binary Tree - each node has exactly two children and all leaf nodes are at the same level
+- Complete Binary Tree - all leaf nodes are at height h or h - 1 and also without missing any number in sequence 
  
 Operations:
 

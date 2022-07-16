@@ -22,6 +22,20 @@ class BinaryTree:
         else:
             self._data = data
 
+    def search(self, item) -> bool:
+        if self._data == item:
+            return True
+        elif item < self._data:
+            if self._left:
+                return self._left.search(item)
+            else: 
+                return False
+        else:
+            if self._right:
+                return self._right.search(item)
+            else:
+                return False
+
     def in_order_traversal(self):
         items = []
         if self._left:

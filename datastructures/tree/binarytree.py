@@ -45,6 +45,16 @@ class BinaryTree:
             items += self._right.in_order_traversal()
         return items
 
+    def find_min(self):
+        if self._left is None:
+            return self._data
+        return self._left.find_min()
+
+    def find_max(self):
+        if self._right is None:
+            return self._data
+        return self._right.find_max()
+
 def build_tree(data:list) -> BinaryTree:
     root = None
     if len(data) > 0:

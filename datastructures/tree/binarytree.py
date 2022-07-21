@@ -1,64 +1,84 @@
-from logging import root
-
+class Node:
+    def __init__(self, data) -> None:
+        self.data = data
+        self.left = None
+        self.right = None
+        self.parent = None
 
 class BinaryTree:
-    def __init__(self, data) -> None:
-        self._data = data
-        self._left = None
-        self._right = None
+    def __init__(self) -> None:
+        self.root = None
 
     def insert(self, data) -> None:
-        if self._data:
-            if data < self._data:
-                if self._left is None:
-                    self._left = BinaryTree(data)
-                else:
-                    self._left.insert(data)
-            elif data > self._data:
-                if self._right is None:
-                    self._right = BinaryTree(data)
-                else:
-                    self._right.insert(data)
+        if self.root == None:
+            self.root = Node(data)
         else:
-            self._data = data
+            self._insert(data, self.root)
 
-    def search(self, item) -> bool:
-        if self._data == item:
-            return True
-        elif item < self._data:
-            if self._left:
-                return self._left.search(item)
-            else: 
-                return False
-        else:
-            if self._right:
-                return self._right.search(item)
+    def _insert(self, data, current:Node):
+        if current.data > data:
+            if current.left == None:
+                new_node = Node(data)
+                new_node.parent = current
+                current.left = new_node
             else:
-                return False
+                self._insert(data, current.left)
+        elif current.data < data:
+            if current.right == None:
+                new_node = Node(data)
+                new_node.parent = current
+                current.right = new_node
+            else:
+                self._insert(data, current.right)
+
+    def find(self, data) -> Node:
+        if self.root == None:
+            return None
+        return self._find(data, self.root)
+
+    def _find(self, data, current:Node):
+        if current.data == data:
+            return current
+        elif current.data > data and current.left:
+            return self._find(data, current.left)
+        elif current.data < data and current.right:
+            return self._find(data, current.right)
+        return None
 
     def in_order_traversal(self):
         items = []
-        if self._left:
-            items += self._left.in_order_traversal()
-        items.append(self._data)
-        if self._right:
-            items += self._right.in_order_traversal()
+        self._in_order_traversal(items, self.root)
         return items
+    
+    def _in_order_traversal(self, items, current:Node):
+        if current.left:
+            self._in_order_traversal(items, current.left)
+        items.append(current.data)
+        if current.right:
+            self._in_order_traversal(items, current.right)
 
     def find_min(self):
-        if self._left is None:
-            return self._data
-        return self._left.find_min()
+        if self.root == None:
+            return None
+        return self._find_min(self.root)
 
+    def _find_min(self, current:Node):
+        if current.left == None:
+            return current.data
+        return self._find_min(current.left)
+          
     def find_max(self):
-        if self._right is None:
-            return self._data
-        return self._right.find_max()
+        if self.root == None:
+            return None
+        return self._find_max(self.root)
+    
+    def _find_max(self, current:Node):
+        if current.right == None:
+            return current.data
+        return self._find_max(current.right)
 
 def build_tree(data:list) -> BinaryTree:
-    root = None
-    if len(data) > 0:
-        root = BinaryTree(data[0])
-        for i in range(1, len(data)):
-            root.insert(data[i]) 
-    return root
+    tree = BinaryTree()
+    for item in data:
+        tree.insert(item)
+    return tree

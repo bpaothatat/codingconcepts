@@ -1,5 +1,5 @@
 import unittest
-from binarytree import BinaryTree, build_tree
+from binarytree import *
 
 class BinaryTreeTest(unittest.TestCase):
 
@@ -17,11 +17,11 @@ class BinaryTreeTest(unittest.TestCase):
 
     def test_search(self):
         tree = build_tree([17, 4, 1, 1, 10])
-        self.assertTrue(tree.search(17))
-        self.assertTrue(tree.search(1))
-        self.assertTrue(tree.search(10))
-        self.assertTrue(tree.search(4))
-        self.assertFalse(tree.search(-1))
+        self.assertEqual(tree.find(17).data, 17)
+        self.assertEqual(tree.find(1).data, 1)
+        self.assertEqual(tree.find(10).data, 10)
+        self.assertEqual(tree.find(4).data, 4)
+        self.assertEqual(tree.find(-1), None)
 
 if __name__ == '__main__':
     unittest.main()

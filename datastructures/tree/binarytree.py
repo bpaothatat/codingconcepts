@@ -57,6 +57,30 @@ class BinaryTree:
         if current.right:
             self._in_order_traversal(items, current.right)
 
+    def pre_order_traversal(self):
+        items = []
+        self._pre_order_traversal(items, self.root)
+        return items
+
+    def _pre_order_traversal(self, items, current:Node):
+        items.append(current.data)
+        if current.left:
+            self._pre_order_traversal(items, current.left)
+        if current.right:
+            self._pre_order_traversal(items, current.right)
+
+    def post_order_traversal(self):
+        items = []
+        self._post_order_traversal(items, self.root)
+        return items
+
+    def _post_order_traversal(self, items, current:Node):
+        if current.left:
+            self._post_order_traversal(items, current.left)
+        if current.right:
+            self._post_order_traversal(items, current.right)
+        items.append(current.data)
+
     def find_min(self):
         if self.root == None:
             return None
